@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer components {
+  html {
+    
+  }
+}
+
+body
+{
+  background-image: url("https://img.freepik.com/free-vector/mobile_677411-3285.jpg?t=st=1740670093~exp=1740673693~hmac=bc868b1f9fef92e1ae760d6c4ecd15b78e459b8d92b2d0408c0f4cad8870d612&w=360");
+  background-size: cover
+}
+
+.font-primary {
+  font-family: 'Poppins', sans-serif;
+  color: #0e6ae2;
+}
+
+.font-secondary {
+  font-family: 'Poppins', sans-serif;
+  color: #fb923c;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+/* src/index.css */
+.container {
+  width: 100%;
+  max-width: 100%; /* By default, set width to full */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navtxt
+{
+  font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-size: 14px;
+    
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-size: 15px;
+
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    font-size: 18px;
+  }
+}
+
+
+h6 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
