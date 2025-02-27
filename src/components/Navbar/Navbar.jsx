@@ -41,7 +41,7 @@ const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   return (
     <>
-      <nav className="bg-white shadow-md">
+      <nav className="bg-white shadow-md fixed top-0 w-full z-25">
         <div className="container flex justify-between items-center py-4 md:pt-4">
           {/* Logo section */}
           <div className='w-55 h-auto'>

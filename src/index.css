@@ -41,6 +41,30 @@ body
   font-family: "Poppins", sans-serif;
 }
 
+.custom-progress-bar {
+  width: 100%; /* Set the width of the progress bar */
+  height: 20px; /* Set the height of the progress bar */
+  appearance: none; /* Remove default styling */
+  border-radius: 10px; /* Round the corners */
+  background-color: #f3f3f3; /* Light background color */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+.custom-progress-bar::-webkit-progress-bar {
+  background-color: #f3f3f3; /* Background color of the progress bar */
+  border-radius: 10px;
+}
+
+.custom-progress-bar::-webkit-progress-value {
+  background-color: #4caf50; /* Color of the filled portion */
+  border-radius: 10px;
+}
+
+.custom-progress-bar::-moz-progress-bar {
+  background-color: #4caf50; /* For Firefox */
+  border-radius: 10px;
+}
+
 @media (min-width: 640px) {
   .container {
     padding-left: 1rem;

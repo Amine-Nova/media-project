@@ -3,7 +3,7 @@ import slider from "../../images/hero/mediabenotman-slider.webp";
 
 const Hero = () => {
   return (
-    <section className="container grid grid-cols-1 md:grid-cols-2 min-h-[650px] item-center">
+    <section className="container grid grid-cols-1 md:grid-cols-2 min-h-[650px] items-center pt-25">
       {/* Brand info */}
       <div className=" flex flex-col justify-center py-14 md:py-0 relative z-10 pl-8">
         <div className="space-y-6 lg:max-w-[510px]">
