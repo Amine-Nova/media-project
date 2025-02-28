@@ -1,6 +1,5 @@
 import React from "react";
 import slider from "../../images/About/mediabenotman-slider (1).webp";
-import progress from "../../images/About/progress.webp";
 
 const About = () => {
   return (
@@ -11,19 +10,16 @@ const About = () => {
       </div>
       {/* Brand info */}
       <div className=" flex flex-col justify-center py-14 md:py-0 relative z-10 pl-8">
-        <div className="space-y-6 lg:max-w-[510px]">
-          <h1 className="font-bold text-blue-900 dark:text-white text-lg">
+        <div className="space-y-1 lg:max-w-[510px]">
+          <h1 className="font-bold text-blue-900 dark:text-white text-3xl">
             About us
           </h1>
           <h1 className="poppins text-5xl font-extrabold uppercase text-gray-800 leading-tight md:leading-snug">
-            Who is Media BENOTMAN
+          Media Benotman Your key to success!
           </h1>
-          <p className="poppins text-lg text-gray-500 leading-relaxed">
-            WITH EXPERIANCE MORE THAN 15 YEARS AND MORE THAN 48 TEAM MEMBRE WE
-            ARE THE FIRST COMPANY WORLD WIDE GARANTIE SELLS AND HUGE BRANDING
-            FOR YOUR COMPANY WE PROVIDE STRATEGIE MARKETING / PACK VIDEOS HIGHT
-            QUALITY / DESIGN AND GRAPHIQUE /ADS MANAGER ALSO CRM AND PLATEFORM
-            FRO YOUR PROJECT AND PROVIDE HIGHT SERVICE
+          <p className="poppins text-lg text-gray-500 leading-relaxed uppercase">
+          Guaranteed results, innovative strategies, and unlimited client acquisition – Let’s grow together!
+
           </p>
         </div>
       </div>
