@@ -6,6 +6,12 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import CopyRights from "./components/Footer/CopyRights";
+import Signin from "./components/Signin/Signin";
+import Signup from "./components/Signup/Signup";
+import Dashborad from "./components/Dashboard/Dashborad";
+import { path } from "framer-motion/client";
+
+
 const App = () => {
   return (
     <Router>
@@ -22,6 +28,9 @@ const App = () => {
               </main>
             }
           />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/dashboard" element={<Dashborad />} />
         </Routes>
         <Footer />
         <CopyRights />

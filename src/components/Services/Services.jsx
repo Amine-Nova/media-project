@@ -92,20 +92,6 @@ const InstaVideos = [
 ];
 
 const Services = () => {
-  // Create references for the videos
-  const videoRefs = useRef(InstaVideos.map(() => React.createRef()));
-
-  // Handle hover play and pause
-  const handleMouseEnter = (index) => {
-    videoRefs.current[index].current.play();
-  };
-
-  const handleMouseLeave = (index) => {
-    const video = videoRefs.current[index].current;
-    video.pause();
-    video.currentTime = 0;
-  };
-  
   return (
     <section className="flex flex-col items-center py-16">
       {/* Insta Section */}
@@ -122,21 +108,23 @@ const Services = () => {
       </div>
       {/* Videos Section */}
       <div className="flex justify-between p-8 bg-gradient-to-r rounded-2xl  space-x-6">
-        {InstaVideos.map((videoItem, index) => (
+        {InstaVideos.map((videoItem) => (
           <div
             key={videoItem.id}
             className="flex-1 hover:bg-blue-300 rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={() => handleMouseLeave(index)}
           >
             <video
-              ref={videoRefs.current[index]}
               width="100%"
               height="auto"
               src={videoItem.video}
               loop
-              playsInline
-              className="rounded-xl"
+              onClick={(e) => {
+                if (e.target.paused) {
+                  e.target.play();
+                } else {
+                  e.target.pause();
+                }
+              }}
             />
           </div>
         ))}
@@ -154,12 +142,19 @@ const Services = () => {
       </div>
       {/* Videos Section  2*/}
       <div className="grid grid-cols-1 md:grid-cols-3 pt-10 gap-6 xl:gap-16 md:gap-10 sm:gap-12">
-        {InstaReels.map((video) => (
+        {InstaReels.map((video, index) => (
           <video
+            key={index}
             src={video.video}
-            className="w-full h-150 sm:w-120 sm:h-full md:w-65 md:h-120 max-w-md lg:h-190 lg:w-80 xl:w-160 rounded-3xl object-cover"
+            className="w-full h-150 sm:w-120 sm:h-full md:w-65 md:h-120 max-w-md lg:h-190 lg:w-80 xl:w-160 rounded-3xl object-cover hover:scale-105 hover:shadow-2xl duration-600"
             loop
-            controls
+            onClick={(e) => {
+              if (e.target.paused) {
+                e.target.play();
+              } else {
+                e.target.pause();
+              }
+            }}
           ></video>
         ))}
       </div>
