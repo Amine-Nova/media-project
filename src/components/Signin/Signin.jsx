@@ -69,7 +69,14 @@ const Login = () => {
             </div>
           </div>
         </form>
-
+        <p>
+        <Link
+              to="/dashboard"
+              className="text-blue-800 font-semibold hover:underline"
+            >
+              dashboard
+            </Link>
+        </p>
         <div className="text-center mt-4">
           <p className="text-gray-500 text-sm">
             New Here?{" "}

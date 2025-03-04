@@ -8,9 +8,7 @@ import Services from "./components/Services/Services";
 import CopyRights from "./components/Footer/CopyRights";
 import Signin from "./components/Signin/Signin";
 import Signup from "./components/Signup/Signup";
-import Dashborad from "./components/Dashboard/Dashborad";
-import { path } from "framer-motion/client";
-
+import Dashboard from "./components/Dashboard/Dashborad"; // Ensure correct import
 
 const App = () => {
   return (
@@ -30,7 +28,7 @@ const App = () => {
           />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/dashboard" element={<Dashborad />} />
+          <Route path="/dashboard/*" element={<Dashboard />} />
         </Routes>
         <Footer />
         <CopyRights />

@@ -4,13 +4,13 @@ import logo from "../../assets/control/mediabenotman-logo.webp";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
-    <div className="navtxt flex">
+    <div className="navtxt flex flex-col">
       <div
         className={`${
-          open ? "w-72" : "w-20"
-        } h-screen  bg-blue-300 relative duration-500`}
+          open ? "w-25 md:w-45 lg:w-55 xl:w-65" : "w-15"
+        } h-full  bg-blue-300 relative duration-500`}
       >
         <img
           src={fleche}
@@ -27,10 +27,10 @@ const Sidebar = () => {
             className={`cursor-pointer duration-500 ${!open && "pt-8"}`}
           />
         </div>
-        <div className="top-0">
+        <div className="">
           <h1
-            className={`text-black text-center origin-left py-2 font-bold text-2xl duration-500 bg-transparent hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
-              !open && "text-[0px]"
+            className={`text-black text-center origin-left py-2 font-bold text-xs md:text-xl lg:text-2xl duration-500 bg-transparent hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
+              !open && "text-[0px]  pointer-events-none opacity-0"
             }`}
           >
             <Link to="/dashboard" className="block py-3">
@@ -38,55 +38,53 @@ const Sidebar = () => {
             </Link>
           </h1>
           <h1
-            className={`text-black text-center origin-left py-2  font-bold text-2xl duration-500  bg-transparent  hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
-              !open && " text-[0px]"
+            className={`text-black text-center origin-left py-2  font-bold text-xs md:text-xl lg:text-2xl duration-500  bg-transparent  hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
+              !open && " text-[0px]  pointer-events-none opacity-0"
             }`}
           >
-            <Link to="/dashboard" className="block py-3">
+            <Link to="/dashboard/leadgen" className="block py-3">
               Lead Generation
             </Link>
           </h1>
           <h1
-            className={`text-black text-center origin-left py-2  font-bold text-2xl duration-500  bg-transparent  hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
-              !open && " text-[0px]"
+            className={`text-black text-center origin-left py-2  font-bold text-xs md:text-xl lg:text-2xl duration-500  bg-transparent  hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
+              !open && " text-[0px]  pointer-events-none opacity-0"
             }`}
           >
-            <Link to="/dashboard" className="block py-3">
+            <Link to="/dashboard/ads" className="block py-3">
               Ads Management
             </Link>
           </h1>
           <h1
-            className={`text-black text-center origin-left py-2  font-bold text-2xl duration-500  bg-transparent  hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
-              !open && " text-[0px]"
+            className={`text-black text-center origin-left py-2  font-bold text-xs md:text-xl lg:text-2xl duration-500  bg-transparent  hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
+              !open && " text-[0px]  pointer-events-none opacity-0"
             }`}
           >
             <Link to="/dashboard" className="block py-3">
-                Video Services
+              Video Services
             </Link>
           </h1>
           <h1
-            className={`text-black text-center origin-left py-2  font-bold text-2xl duration-500  bg-transparent hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
-              !open && " text-[0px]"
+            className={`text-black text-center origin-left py-2  font-bold text-xs md:text-xl lg:text-2xl duration-500  bg-transparent hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
+              !open && " text-[0px]  pointer-events-none opacity-0"
             }`}
           >
             <Link to="/dashboard" className="block ">
-            Community Management
+              Community Management
             </Link>
           </h1>
+          <div className="absolute bottom-0 text-center w-full">
           <h1
-            className={`text-black text-center origin-left py-2 font-bold text-2xl duration-500  bg-transparent hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
-              !open && " text-[0px]"
+            className={` text-black text-center font-bold text-xs md:text-xl lg:text-2xl duration-500 mt-auto py-5  bg-transparent hover:shadow-2xl hover:bg-blue-800 cursor-pointer ${
+              !open && " text-[0px]  pointer-events-none opacity-0"
             }`}
-          >
-            <Link to="/dashboard" className="block py-3">
-            Support
+            >
+            <Link to="/dashboard" className="block"> 
+              Support
             </Link>
           </h1>
+          </div>
         </div>
-
-      </div>
-      <div className="p-7 pt-40 text-2xl font-semibold flex-1 h-screen">
-        <h1></h1>
       </div>
     </div>
   );
